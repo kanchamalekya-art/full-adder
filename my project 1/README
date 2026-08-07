@@ -1,0 +1,47 @@
+# Full Adder using Verilog
+
+## Overview
+A Full Adder is a combinational logic circuit that adds three binary inputs:
+- A
+- B
+- Cin (Carry In)
+
+It produces:
+- Sum
+- Cout (Carry Out)
+
+## Truth Table
+
+| A | B | Cin | Sum | Cout |
+|---|---|-----|-----|------|
+|0|0|0|0|0|
+|0|0|1|1|0|
+|0|1|0|1|0|
+|0|1|1|0|1|
+|1|0|0|1|0|
+|1|0|1|0|1|
+|1|1|0|0|1|
+|1|1|1|1|1|
+
+## Boolean Equations
+
+Sum = A ^ B ^ Cin
+
+Cout = (A & B) | (B & Cin) | (Cin & A)
+
+## Files
+
+- full_adder.v - Verilog design
+- tb_full_adder.v - Testbench
+- simulation.png - Waveform output
+
+## Simulation Tool
+
+- ModelSim
+- Vivado
+- Icarus Verilog
+- GTKWave
+
+## Expected Output
+
+The simulation verifies all 8 possible input combinations and confirms the correct Sum and Carry outputs.
